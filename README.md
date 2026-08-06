@@ -1,79 +1,141 @@
 # Smart PDF Organizer
 
-A Python desktop application that scans PDF files, extracts metadata, detects duplicate files using SHA-256 hashing, organizes PDFs into folders, stores scan history in SQLite, and exports reports in CSV and Excel formats.
+> A Python-based desktop application for scanning, organizing, and managing PDF files with metadata extraction, duplicate detection, and automated report generation.
+
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-009688)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
 
 ---
 
-## Features
+## 📌 Overview
 
-- Recursive PDF folder scanning
-- PDF metadata extraction
-- SHA-256 duplicate detection
-- SQLite database integration
-- Automatic PDF organization
-- CSV and Excel report generation
-- Search scan history
-- Logging and exception handling
-- User-friendly Tkinter GUI
+**Smart PDF Organizer** is a lightweight desktop application developed using **Python** and **Tkinter** for efficiently organizing and managing PDF files.
+
+The application recursively scans folders, extracts PDF metadata, stores scan history in a local SQLite database, detects duplicate PDF files using **SHA-256 hashing**, organizes files into structured folders, and generates reports in both **CSV** and **Excel** formats.
+
+It is a lightweight, fully offline application that requires no internet connection or cloud services.
 
 ---
 
-## Tech Stack
+## ⭐ Key Highlights
 
-- Python 3
-- Tkinter
-- SQLite3
-- pypdf
-- pandas
-- openpyxl
-- hashlib
-- shutil
-- logging
+- 📂 Recursive PDF Folder Scanning
+- 🔍 SHA-256 Duplicate File Detection
+- 📑 PDF Metadata Extraction
+- 🗃 SQLite Database Integration
+- 📁 Automatic PDF Organization
+- 📊 CSV & Excel Report Generation
+- 🔎 Searchable Scan History
+- 💻 Fully Offline Desktop Application
+- ⚡ Lightweight and Easy to Use
+- 🖥 Cross-Platform Desktop Application
 
 ---
 
-## Project Structure
+## ✨ Features
 
-```
-SmartPDFOrganizer/
-│
-├── assets/
-├── sample_pdfs/
-├── reports/
-├── organized_files/
-├── logs/
-│
+- Scan folders recursively for PDF files
+- Extract PDF metadata including:
+  - File Name
+  - File Path
+  - File Size
+  - Number of Pages
+  - Created Date
+  - Modified Date
+- Store scan history using SQLite
+- Detect duplicate PDF files using SHA-256 hashing
+- Automatically organize PDF files into destination folders
+- Export reports in CSV format
+- Export reports in Excel (.xlsx) format
+- Search previously scanned PDF files
+- Display real-time progress and status updates
+- Maintain application logs
+- Safely organize files without overwriting existing files
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Programming Language | Python 3 |
+| GUI Framework | Tkinter |
+| Database | SQLite |
+| PDF Library | pypdf |
+| Excel Reports | openpyxl |
+| CSV Reports | csv |
+| File Hashing | hashlib |
+| Logging | logging |
+
+---
+
+## 📂 Project Structure
+
+```text
+Smart_PDF_Organizer/
+
 ├── main.py
 ├── gui.py
 ├── scanner.py
-├── database.py
-├── duplicate.py
 ├── organizer.py
+├── duplicate.py
 ├── report.py
-├── utils.py
+├── database.py
 ├── config.py
+├── utils.py
 ├── requirements.txt
-├── README.md
+├── reports/
+├── logs/
+├── organized_files/
 └── smart_pdf_organizer.db
 ```
 
 ---
 
-## Installation
+## 📋 Requirements
 
-Clone the repository:
+- Python 3.9 or later
+- pypdf
+- openpyxl
+
+---
+
+## ⚙ Installation
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/Aravinthasamy112/SmartPDFOrganizer.git
+git clone https://github.com/Aravinthasamy112/Smart_PDF_Organizer.git
 ```
 
-Navigate to the project folder:
+### Navigate to the Project Folder
 
 ```bash
-cd SmartPDFOrganizer
+cd Smart_PDF_Organizer
 ```
 
-Install the required dependencies:
+### Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate the Virtual Environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### Install Required Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -81,62 +143,63 @@ pip install -r requirements.txt
 
 ---
 
-## Run the Application
+## ▶ Running the Application
+
+Run the following command:
 
 ```bash
 python main.py
 ```
 
----
-
-## Workflow
-
-1. Select a PDF folder.
-2. Scan PDF files.
-3. Extract metadata.
-4. Store details in SQLite.
-5. Detect duplicate PDFs using SHA-256.
-6. Organize PDFs into folders.
-7. Export reports in CSV or Excel format.
+The Smart PDF Organizer application will launch automatically.
 
 ---
 
-## Technologies Used
+## 📊 Application Workflow
 
-| Category | Technology |
-|----------|------------|
-| Programming Language | Python 3 |
-| GUI | Tkinter |
-| Database | SQLite3 |
-| PDF Processing | pypdf |
-| Report Generation | pandas, openpyxl |
-| Duplicate Detection | hashlib (SHA-256) |
-| File Operations | shutil |
-| Logging | logging |
+```text
+Select Folder
+      │
+      ▼
+Scan PDF Files
+      │
+      ▼
+Extract PDF Metadata
+      │
+      ▼
+Store Information in SQLite Database
+      │
+      ▼
+Detect Duplicate Files
+      │
+      ▼
+Organize PDF Files
+      │
+      ▼
+Generate CSV / Excel Reports
+```
 
 ---
 
-## Future Enhancements
+## 🚀 Future Enhancements
 
-- OCR support
-- Drag and Drop functionality
+- OCR Support
+- Drag-and-Drop File Support
 - PDF Preview
-- Automatic PDF Categorization
-- Multi-threaded scanning
-- Standalone Executable (PyInstaller)
+- Background Scanning
+- AI-Based Document Classification
+- Cloud Synchronization
+- Scheduled Automatic Scanning
+- Light & Dark Theme
+- Batch File Renaming
+- Standalone Executable (.exe)
 
 ---
 
-## Author
+## 👨‍💻 Developed By
 
-**Aravinthasamy A**
+### Aravinthasamy A
 
-B.Tech Artificial Intelligence & Data Science
-
-- GitHub: [Aravinthasamy112](https://github.com/Aravinthasamy112)
-- LinkedIn: [aravinthasamyas](https://linkedin.com/in/aravinthasamyas)
----
-
-## License
-
-This project is intended for educational and academic purposes only.
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:aravinthasamy2006as@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/Aravinthasamy112)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aravi)
